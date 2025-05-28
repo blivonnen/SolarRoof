@@ -150,5 +150,6 @@ model.fit(train_ds,
 # ---------------------------------------------------------------------------
 # SAVE THE TRAINED NETWORK
 # ---------------------------------------------------------------------------
+# Save model to mounted S3 path
 model.save("model-output/solar_roof_unet.keras")
-print("Model saved to solar_roof_unet.keras")
+print("Model saved to model-output/solar_roof_unet.keras")
