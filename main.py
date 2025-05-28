@@ -9,7 +9,7 @@ from tensorflow.keras import mixed_precision
 from tensorflow.keras.callbacks import EarlyStopping
 from tensorflow.keras.layers import Input, Conv2D, MaxPooling2D, concatenate, UpSampling2D
 
-df = pd.read_parquet("roof-segmentation-control-net/data/train-00000-of-00001.parquet")
+df = pd.read_parquet("hf://datasets/dpanangian/roof-segmentation-control-net/data/train-00000-of-00001.parquet")
 
 # ---------------------------------------------------------------------------
 # CLI – choose hardware optimisations
