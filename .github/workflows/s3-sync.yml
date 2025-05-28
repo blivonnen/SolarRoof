@@ -21,6 +21,8 @@ jobs:
           # sync everything in the repo root into your bucket
           aws s3 sync \
             --delete \
+            --exclude ".*" \
+            --exclude "**/.*" \
             ./ \
-            s3://blivonnen-s3/ \
+            s3://blivonnen-s3/SolarRoof/ \
             --endpoint-url https://s3.bhs.io.cloud.ovh.net/
