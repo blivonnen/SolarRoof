@@ -31,9 +31,9 @@ RUN python3 -m pip install --upgrade pip && \
 RUN chown -R 42420:42420 /workspace
 
 # 5️⃣  Default command (override in job YAML if needed)
-CMD ["python3", "/workspace/SolarRoof/main.py"]
+# CMD ["python3", "/workspace/SolarRoof/main.py"]
 
 # ovhai data store add s3 my-os https://s3.bhs.io.cloud.ovh.net/ bhs aa247a0c5c5e450187e5a25dd103df8c 871a6013aa88418b8a7af5a9edb1627f
 
 
-# ovhai job run --name solar-roof-tedious-kamerlingh-onnes --flavor ai1-le-1-gpu -v blivonnen-s3@my-os:/workspace/SolarRoof:rw blivonnen/solar-roof:latest
+# ovhai job run --name solar-roof-tedious-kamerlingh-onnes --flavor ai1-le-1-gpu -v blivonnen-s3@my-os:/workspace:rw blivonnen/solar-roof:latest -- bash -c 'python3 /workspace/SolarRoof/main.py --epochs 1'
