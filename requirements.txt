@@ -1,0 +1,12 @@
+#–– Core I/O
+fsspec
+huggingface_hub
+pyarrow>=14
+#–– ML & utils
+scikit-learn
+matplotlib
+Pillow
+#-- if CUDA image
+# tensorflow==2.15.0
+numpy
+pandas
