@@ -12,11 +12,6 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Install AWS CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y awscli
-
       - name: Sync files to OVH S3
         env:
           AWS_ACCESS_KEY_ID:     ${{ secrets.OVH_S3_ACCESS_KEY_ID }}
