@@ -19,6 +19,8 @@ parser.add_argument("--gpu", default="auto",
                     help="gpu type: L4, A100, cpu, auto (default=auto)")
 parser.add_argument("--epochs", type=int, default=30,
                     help="number of training epochs (default=30)")
+parser.add_argument("--modeloutput", default="./SolarRoof/model_output/solar_roof_unet.h5",
+                    help="path and type of the model output (default=./SolarRoof/model_output/solar_roof_unet.h5)")
 args, _ = parser.parse_known_args()  # keeps notebook argv intact
 
 gpu_type   = args.gpu.lower()
@@ -151,5 +153,5 @@ model.fit(train_ds,
 # SAVE THE TRAINED NETWORK
 # ---------------------------------------------------------------------------
 # Save model to mounted S3 path
-model.save("/workspace/SolarRoof/model-output/solar_roof_unet.keras")
-print("Model saved to model-output/solar_roof_unet.keras")
+model.save(args.modeloutput)
+print("Model saved to " + args.modeloutput)

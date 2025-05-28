@@ -4,10 +4,10 @@ from PIL import Image
 import tensorflow as tf
 
 # 1 — load the trained network ------------------------------------------------
-model = tf.keras.models.load_model("model-output/solar_roof_unet.keras", compile=False)
+model = tf.keras.models.load_model("model-output/solar_roof_unet.h5", compile=False)
 
 # 2 — read the parquet again --------------------------------------------------
-df = pd.read_parquet("roof-segmentation-control-net/data/train-00000-of-00001.parquet")
+df = pd.read_parquet("hf://datasets/dpanangian/roof-segmentation-control-net/data/train-00000-of-00001.parquet")
 
 def extract_bytes(cell):
     return cell["bytes"] if isinstance(cell, dict) and "bytes" in cell else cell
