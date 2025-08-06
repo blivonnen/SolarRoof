@@ -1,6 +1,7 @@
 # ---------------------------------------------------------------------------
 # Custom training image for OVHcloud AI Training
 # Docs: https://help.ovhcloud.com/csm/en-gb-public-cloud-ai-training-build-use-custom-image
+# docker buildx build --platform linux/amd64 . -t blivonnen/solar-roof:latest -t blivonnen/solar-roof:0.2.3 --push
 # ---------------------------------------------------------------------------
 
 # FROM nvidia/cuda:12.2.2-runtime-ubuntu22.04
