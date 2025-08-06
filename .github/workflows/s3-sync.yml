@@ -32,5 +32,5 @@ jobs:
             --exclude ".*" \
             --exclude "**/.*" \
             ./ \
-            s3://blivonnen-s3/SolarRoof/ \
+            s3://blivonnen-s3/ \
             --endpoint-url https://s3.bhs.io.cloud.ovh.net/
